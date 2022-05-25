@@ -1,15 +1,15 @@
 #!/bin/bash
 
 #Verificando e criando usuário
-getent passwd 01212065-gabriel
+getent passwd cloudstax
 if [ $? -eq 0 ]
 then echo \“Usuario ja existente\”
 
 else echo \"Usuario nao existe, criando usuario\"
-sudo adduser 01212065-gabriel
-sudo usermod -aG sudo 01212065-gabriel
-sudo chpasswd 01212065-gabriel:urubu100
-su 01212065-gabriel -p urubu100
+sudo adduser cloudstax
+sudo usermod -aG sudo cloudstax
+sudo chpasswd cloudstax:urubu100
+su cloudstax -p urubu100
 fi
 
 #Atualizando repositórios e pacotes
