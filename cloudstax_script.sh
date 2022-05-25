@@ -11,7 +11,7 @@ if [ $? -eq 0 ]
 then echo \“Este usuário já está cadastrado\”
 else echo \"O usuário nao existe, criando usuario\"
 sudo adduser cloudstax
-sudo usermod -aG sudo cloudstax
+sudo usermod -aG cloudstax
 su cloudstax
 cd
 fi
@@ -21,7 +21,7 @@ echo "Atualizando repositórios e pacotes do sistema"
 sudo apt-get update && sudo apt-get upgrade -y
 
 echo "Instalando interface gráfica"
-sudo apt-get install lxde lxde-core xrdp tigervnc-standalone-server lightdm -y
+sudo apt-get install lxde lxde-core xrdp tigervnc-standalone-server lightdm -y  
 
 #Verificando e instalando o Java
 echo "Verificando versão do Java"
