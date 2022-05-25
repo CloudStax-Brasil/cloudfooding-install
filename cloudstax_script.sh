@@ -39,6 +39,7 @@ clear
 
 sudo apt update && sudo apt upgrade -y
 clear
+wget https://github.com/CloudStax-Brasil/cloudfooding-install/raw/master/cloudfooding-1.0.jar
 sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
