@@ -28,30 +28,17 @@ java --version
 if [ $? -eq 0 ]
 then echo \"O Java já está instalado\"
 else echo \"O Java está não instalado\"
-fi
-
-echo \"Gostaria de instalar o Java? S/n \"
-
-if 
-then
 sudo apt install default-jdk -y
 clear
 echo \"JAVA instalado na versao 11\"
 java --version
 sleep 5
-else echo \"você escolheu não instalar\"
-break
 fi
-clear
 
 echo \"Sera realizado agora, a instalacao cloudfooding, nosso sistema de monitoramento\"
 sleep 4
 clear
 
-echo \"Você deseja instalar e configrar o banco de dados local? S/n \"
-read boolean
-if [ \"$boolean\" == \"s\" || \"$boolean\" == \"S\" ]
-then
 sudo apt update && sudo apt upgrade -y
 clear
 sudo apt-get install docker.io -y
@@ -61,5 +48,4 @@ sudo docker pull mysql:5.7
 sudo docker build -t cloudstax_img:1.0 .
 sudo docker run -d -p 3306:3306 --name cloudstax cloudstax_img:1.0
 clear
-fi
 fi
