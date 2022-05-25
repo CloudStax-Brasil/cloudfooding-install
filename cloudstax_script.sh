@@ -3,7 +3,8 @@ echo "Este é o script de instalação e configuração do Cloudfooding"
 echo "O script irá fazer diversas modificações na sua máquina"
 echo "Tem certeza que deseja continuar? S\n"
 read boolean
-if [ \"$boolean\" == \"s\" ]
+read inst
+if [ \"$inst\" == \"s\" ]
 #Verificando e criando usuário
 then echo "Fazendo verificação de usuário"
 getent passwd cloudstax
@@ -46,6 +47,5 @@ sudo docker build -t cloudstax_img:1.0 .
 sudo docker run -d -p 3306:3306 --name cloudstax cloudstax_img:1.0
 clear
 
-else
-echo "A instalação foi cancelada"
+else echo "A instalação foi cancelada"
 fi
