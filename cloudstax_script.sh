@@ -3,7 +3,7 @@ echo "Este é o script de instalação e configuração do Cloudfooding"
 echo "O script irá fazer diversas modificações na sua máquina"
 echo "Tem certeza que deseja continuar? S\n"
 read boolean
-if [ \"$boolean\" == \"s\" || \"$boolean\" == \"S\" ]
+if [ \"$boolean\" == \"s\" ]
 #Verificando e criando usuário
 then echo "Fazendo verificação de usuário"
 getent passwd cloudstax
