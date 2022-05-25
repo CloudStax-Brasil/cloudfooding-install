@@ -11,7 +11,7 @@ if [ $? -eq 0 ]
 then echo \“Este usuário já está cadastrado\”
 else echo \"O usuário nao existe, criando usuario\"
 sudo adduser cloudstax
-sudo usermod -aG cloudstax
+sudo usermod -aG sudo cloudstax
 su cloudstax
 cd
 fi
