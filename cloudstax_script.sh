@@ -13,6 +13,7 @@ else echo \"O usuário nao existe, criando usuario\"
 sudo adduser cloudstax
 sudo usermod -aG sudo cloudstax
 su cloudstax
+cd
 fi
 
 #Atualizando repositórios e pacotes
