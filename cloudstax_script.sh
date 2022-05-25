@@ -48,4 +48,7 @@ sudo docker pull mysql:5.7
 sudo docker build -t cloudstax_img:1.0 .
 sudo docker run -d -p 3306:3306 --name cloudstax cloudstax_img:1.0
 clear
+
+else
+echo "A instalação foi cancelada"
 fi
