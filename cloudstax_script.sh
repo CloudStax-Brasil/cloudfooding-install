@@ -2,7 +2,6 @@
 echo "Este é o script de instalação e configuração do Cloudfooding"
 echo "O script irá fazer diversas modificações na sua máquina"
 echo "Tem certeza que deseja continuar? S\n"
-read boolean
 read inst
 if [ \"$inst\" == \"s\" ]
 #Verificando e criando usuário
